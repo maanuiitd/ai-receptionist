@@ -12,5 +12,11 @@ wheels/
 # Project folders, and files creation script
 scaffold.sh
 
-# Environment file
+# Environment files and creds
 .env
+credentials.json
+
+# Google calendar test
+quickstart.py
+
+token.json
