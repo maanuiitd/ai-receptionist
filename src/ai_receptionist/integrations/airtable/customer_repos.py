@@ -3,7 +3,6 @@ import os, requests
 from functools import partial
 from pyairtable.orm import Model
 from pyairtable.orm import fields as F
-from pyairtable import Api
 
 load_dotenv()
 
