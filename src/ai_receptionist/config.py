@@ -8,8 +8,8 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     # LLM
-    openai_api_key: str
-    llm_model: str = "gpt-4.1"
+    openai_api_key: str = ""
+    llm_model: str = "gpt-4.1-mini"
 
     # Vapi
     vapi_api_key: str

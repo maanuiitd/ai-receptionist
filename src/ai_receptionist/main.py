@@ -2,7 +2,7 @@
 import structlog
 from fastapi import FastAPI
 
-from ai_receptionist.api.routes import health, vapi_webhook
+from ai_receptionist.api.routes import health, vapi_webhook, custom_llm
 from ai_receptionist.config import settings
 
 structlog.configure(
@@ -12,5 +12,7 @@ structlog.configure(
 )
 
 app = FastAPI(title="AI Receptionist", version="0.1.0")
-# app.include_router(health.router)
+
+app.include_router(custom_llm.router)
+app.include_router(health.router)
 # app.include_router(vapi_webhook.router)
